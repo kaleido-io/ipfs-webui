@@ -4,7 +4,6 @@ import { AutoSizer, Table, Column, SortDirection } from 'react-virtualized'
 import { sortByProperty } from '../../lib/sort.js'
 
 // Components
-import Button from '../button/Button.js'
 import Overlay from '../overlay/Overlay.js'
 import PinningModal from './pinning-manager-modal/PinningManagerModal.js'
 import AutoUploadModal from './auto-upload-modal/AutoUploadModal.js'
@@ -24,7 +23,7 @@ const HEADER_HEIGHT = 32
 export const PinningManager = ({ pinningServices, ipfsReady, arePinningServicesSupported, doFetchPinningServices, doFetchPinningServicesStats, doFetchLocalPinsStats, doRemovePinningService, localPinsSize, localNumberOfPins, t }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const [isToggleModalOpen, setToggleModalOpen] = useState(false)
-  const onModalOpen = () => setModalOpen(true)
+  // Removed Modal Open
   const onModalClose = () => setModalOpen(false)
   const onToggleModalOpen = (name) => setToggleModalOpen(name)
   const onToggleModalClose = () => setToggleModalOpen(false)
@@ -74,13 +73,6 @@ export const PinningManager = ({ pinningServices, ipfsReady, arePinningServicesS
             )}
           </AutoSizer>
         </div>
-        { arePinningServicesSupported &&
-        (<div className='flex justify-end w-100 mt2'>
-          <Button className="tc mt2" bg='bg-navy' onClick={onModalOpen}>
-            <span><span className="aqua">+</span> {t('actions.addService')}</span>
-          </Button>
-        </div>
-        )}
       </div>
 
       <Overlay show={isToggleModalOpen} onLeave={onToggleModalClose}>

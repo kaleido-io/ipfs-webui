@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'redux-bundler-react'
 import { withTranslation } from 'react-i18next'
-import Button from '../button/Button.js'
 import { checkValidAPIAddress } from '../../bundles/ipfs-provider.js'
 
 const ApiAddressForm = ({ t, doUpdateIpfsApiAddress, ipfsApiAddress, ipfsInitFailed }) => {
@@ -46,16 +45,8 @@ const ApiAddressForm = ({ t, doUpdateIpfsApiAddress, ipfsApiAddress, ipfsInitFai
         onChange={onChange}
         onKeyPress={onKeyPress}
         value={value}
+        readOnly
       />
-      <div className='tr'>
-        <Button
-          minWidth={100}
-          height={40}
-          className='mt2 mt0-l ml2-l tc'
-          disabled={!isValidApiAddress || value === ipfsApiAddress}>
-          {t('actions.submit')}
-        </Button>
-      </div>
     </form>
   )
 }
