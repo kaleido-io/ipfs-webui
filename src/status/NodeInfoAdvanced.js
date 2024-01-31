@@ -58,7 +58,7 @@ const NodeInfoAdvanced = ({ t, identity, ipfsProvider, ipfsApiAddress, gatewayUr
                 ? (<Address value={ipfsApiAddress} />)
                 : asAPIString(ipfsApiAddress)
               }
-              <a className='ml2 link blue sans-serif fw6' href="#/settings">{t('app:actions.edit')}</a>
+              {/* Removed edit link */}
             </div>)
           } />
           : <Definition advanced term={t('app:terms.api')} desc={<ProviderLink name={ipfsProvider} />} />

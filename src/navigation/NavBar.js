@@ -51,7 +51,7 @@ const NavLink = ({
 
 export const NavBar = ({ t }) => {
   const codeUrl = 'https://github.com/ipfs/ipfs-webui'
-  const bugsUrl = `${codeUrl}/issues`
+  const kaleidoURL = 'https://kaleido.io'
   const gitRevision = process.env.REACT_APP_GIT_REV
   const revisionUrl = `${codeUrl}/commit/${gitRevision}`
   return (
@@ -75,10 +75,7 @@ export const NavBar = ({ t }) => {
           <a className='link white' href={revisionUrl} target='_blank' rel='noopener noreferrer'>{t('app:terms.revision')} {gitRevision}</a>
         </div> }
         <div className='mb1'>
-          <a className='link white' href={codeUrl} target='_blank' rel='noopener noreferrer'>{t('app:nav.codeLink')}</a>
-        </div>
-        <div>
-          <a className='link white' href={bugsUrl} target='_blank' rel='noopener noreferrer'>{t('app:nav.bugsLink')}</a>
+          <a className='link white' href={kaleidoURL} target='_blank' rel='noopener noreferrer'>Kaleido Inc</a>
         </div>
       </div>
     </div>
