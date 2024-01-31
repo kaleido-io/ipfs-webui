@@ -8,7 +8,6 @@ import StrokeMarketing from '../icons/StrokeMarketing.js'
 import StrokeWeb from '../icons/StrokeWeb.js'
 import StrokeCube from '../icons/StrokeCube.js'
 import StrokeSettings from '../icons/StrokeSettings.js'
-import StrokeIpld from '../icons/StrokeIpld.js'
 
 // Styles
 import './NavBar.css'
@@ -67,7 +66,6 @@ export const NavBar = ({ t }) => {
         <div className='db overflow-x-scroll overflow-x-hidden-l nowrap tc' role='menubar'>
           <NavLink to='/' alternative="status" icon={StrokeMarketing}>{t('status:title')}</NavLink>
           <NavLink to='/files' icon={StrokeWeb}>{t('files:title')}</NavLink>
-          <NavLink to='/explore' icon={StrokeIpld}>{t('explore:tabName')}</NavLink>
           <NavLink to='/peers' icon={StrokeCube}>{t('peers:title')}</NavLink>
           <NavLink to='/settings' icon={StrokeSettings}>{t('settings:title')}</NavLink>
         </div>
